@@ -1,0 +1,65 @@
+name: Organizational Github Actions Publisher
+on:
+ push:
+   branches: [ 'master' ]
+   paths:
+   - 'templates/workflows/**'
+ workflow_dispatch: 
+jobs:
+  publish-workflow-template:
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        target_repo: [ 
+          'amphora' , 
+          'base-images',
+          'carbyned',
+          'carbynestack',
+          'carbynestack.github.io',
+          'castor', 
+          'cli', 
+          'cli-ng', 
+          'common',
+          'corporate-information',
+          'ephemeral',
+          'java-http-client', 
+          'klyshko',
+          'MP-SPDZ',
+          'mp-spdz-integration',
+          'serving',
+        ]
+    steps:
+      - name: Checkout Source Repo
+        uses: actions/checkout@v2
+        with:
+          path: source 
+          persist-credentials: false 
+          fetch-depth: 0 
+      - name: Checkout Target Repo
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.repository_owner }}/${{ matrix.target_repo }}
+          path: ${{ matrix.target_repo }}
+          ref: master
+          persist-credentials: false 
+          fetch-depth: 0 
+      - name: Update Actions
+        shell: bash
+        run: |
+          mkdir -p .github/workflows/
+          cp ../source/templates/workflows/* .github/workflows/
+        working-directory: ./${{ matrix.target_repo }}
+      - name: Publish Workflows
+        shell: bash
+        run: |
+          git config --local user.name "cs-minion"
+          git add .
+          git commit -m "Updating GitHub Actions from the origanization .github repo"
+        working-directory: ./${{ matrix.target_repo }}
+      - name: Push changes
+        uses: ad-m/github-push-action@v0.6.0
+        with:
+          directory: ./${{ matrix.target_repo }}
+          repository: ${{ github.repository_owner }}/${{ matrix.target_repo }}
+          branch: master
+          github_token: ${{ secrets.CS_MINION_PAT }}

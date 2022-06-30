@@ -5,6 +5,15 @@
 This repository contains the Carbyne Stack organization profile and default
 [community health files][health-files].
 
+## Structure
+
+``` bash
+.
+├── profile         # GitHub Organization profile for https://github.com/carbynestack
+└── templates       
+    └── workflows   # GitHub Actions that will be deployed to all repos
+```
+
 ## License
 
 The Carbyne Stack contents of this repository are open-sourced under the Apache
