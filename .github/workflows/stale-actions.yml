@@ -6,6 +6,7 @@
 #
 name: 'Close Stale Issues and PRs'
 on:
+
   # Allows workflow to be reusable.  @see https://docs.github.com/en/actions/using-workflows/reusing-workflows
   workflow_call:
 
