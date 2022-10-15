@@ -1,0 +1,30 @@
+[
+  {
+    "project": "vendor/github.com/google/go-github/v47",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/github.com/google/go-querystring",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/github.com/golang/protobuf",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/golang.org/x/net",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/golang.org/x/crypto",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/golang.org/x/oauth2",
+    "license": "BSD-3-Clause"
+  },
+  {
+    "project": "vendor/google.golang.org/appengine",
+    "license": "Apache-2.0"
+  }
+]

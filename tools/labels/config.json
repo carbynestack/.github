@@ -1,0 +1,140 @@
+{
+  "repositories": [
+    ".github",
+    "amphora",
+    "base-images",
+    "carbyned",
+    "carbynestack",
+    "carbynestack.github.io",
+    "castor",
+    "common",
+    "corporate-information",
+    "cli",
+    "cli-ng",
+    "ephemeral",
+    "java-http-client",
+    "klyshko",
+    "mp-spdz-integration"
+  ],
+  "labels": {
+    "delete-obsolete": true,
+    "desired": [
+      {
+        "name": "good first issue",
+        "description": "Denotes an issue ready for a new contributor.",
+        "color": "1D76DB"
+      },
+      {
+        "name": "help wanted",
+        "description": "Denotes an issue that needs help from a contributor.",
+        "color": "1D76DB"
+      },
+      {
+        "name": "kind/bug",
+        "replaces": "bug",
+        "description": "Categorizes issue or PR as related to a bug.",
+        "color": "cfd3d7"
+      },
+      {
+        "name": "kind/cleanup",
+        "description": "Categorizes issue or PR as related to cleaning up code, process, or technical debt.",
+        "color": "cfd3d7"
+      },
+      {
+        "name": "kind/documentation",
+        "description": "Categorizes issue or PR as related to documentation.",
+        "replaces": "documentation",
+        "color": "cfd3d7"
+      },
+      {
+        "name": "kind/feature",
+        "description": "Categorizes issue or PR as related to a new feature.",
+        "replaces": "enhancement",
+        "color": "cfd3d7"
+      },
+      {
+        "name": "kind/support",
+        "description": "Categorizes issue or PR as a support question.",
+        "replaces": "question",
+        "color": "cfd3d7"
+      },
+      {
+        "name": "lifecycle/rotten",
+        "description": "Denotes an issue or PR that has aged beyond stale and will be auto-closed.",
+        "color": "0E8A16"
+      },
+      {
+        "name": "lifecycle/stale",
+        "description": "Denotes an issue or PR has remained open with no activity and has become stale.",
+        "color": "0E8A16"
+      },
+      {
+        "name": "lifecycle/frozen",
+        "description": "Indicates that an issue or PR should not be auto-closed due to staleness.",
+        "color": "0E8A16"
+      },
+      {
+        "name": "needs-triage",
+        "description": "Indicates an issue or PR lacks a `triage/foo` label and requires one.",
+        "color": "FBCA04"
+      },
+      {
+        "name": "priority/awaiting-more-evidence",
+        "description": "Lowest priority. Possibly useful, but not yet enough support to actually get it done.",
+        "replaces": "wont have",
+        "color": "D93F0B"
+      },
+      {
+        "name": "priority/backlog",
+        "description": "Higher priority than priority/awaiting-more-evidence.",
+        "replaces": "could have",
+        "color": "D93F0B"
+      },
+      {
+        "name": "priority/important-longterm",
+        "description": "Important over the long term, but may not be staffed and/or may need multiple releases to complete.",
+        "replaces": "should have",
+        "color": "D93F0B"
+      },
+      {
+        "name": "priority/important-soon",
+        "description": "Must be staffed and worked on either currently, or very soon, ideally in time for the next release.",
+        "replaces": "must have",
+        "color": "D93F0B"
+      },
+      {
+        "name": "priority/critical-urgent",
+        "description": "Highest priority. Must be actively worked on as someone's top priority right now.",
+        "color": "D93F0B"
+      },
+      {
+        "name": "triage/accepted",
+        "description": "Indicates an issue or PR is ready to be actively worked on.",
+        "color": "d876e3"
+      },
+      {
+        "name": "triage/duplicate",
+        "description": "Indicates an issue is a duplicate of other open issue.",
+        "replaces": "duplicate",
+        "color": "d876e3"
+      },
+      {
+        "name": "triage/needs-information",
+        "description": "Indicates an issue needs more information in order to work on it.",
+        "color": "d876e3"
+      },
+      {
+        "name": "triage/not-reproducible",
+        "description": "Indicates an issue can not be reproduced as described.",
+        "replaces": "invalid",
+        "color": "d876e3"
+      },
+      {
+        "name": "triage/unresolved",
+        "description": "Indicates an issue that can not or will not be resolved.",
+        "replaces": "wontfix",
+        "color": "d876e3"
+      }
+    ]
+  }
+}
