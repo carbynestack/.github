@@ -1,0 +1,23 @@
+#
+# Copyright (c) 2022 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/carbynestack/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: Label issues
+on:
+
+  # Allows workflow to be reusable.  @see https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call:
+
+jobs:
+  label_issues:
+    runs-on: ubuntu-20.04
+    permissions:
+      issues: write
+    steps:
+      - name: Label Issues
+        uses: andymckay/labeler@v1.0.4
+        with:
+          add-labels: "needs-triage"
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
