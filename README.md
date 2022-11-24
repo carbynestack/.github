@@ -5,6 +5,17 @@
 This repository contains the Carbyne Stack organization profile and default
 [community health files][health-files].
 
+## Structure
+
+``` bash
+.
+├── profile         # GitHub Organization profile for https://github.com/carbynestack
+└── .github       
+    └── workflows   # Reusable GitHub Actions that can be accessed across the organization
+```
+
+**_NOTE:_**  Reusable workflows **must** be located in `.github/workflows` ([reference](https://github.com/orgs/community/discussions/9050))
+
 ## License
 
 The Carbyne Stack contents of this repository are open-sourced under the Apache

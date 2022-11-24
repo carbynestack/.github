@@ -1,0 +1,30 @@
+#
+# Copyright (c) 2022 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/carbynestack/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: 'Close Stale Issues and PRs'
+on:
+
+  # Allows workflow to be reusable.  @see https://docs.github.com/en/actions/using-workflows/reusing-workflows
+  workflow_call:
+
+jobs:
+  stale:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/stale@v5
+        with:
+          stale-issue-label: 'lifecycle/stale'
+          stale-issue-message: 'This issue has been marked stale because it has been open for 90 days with no activity. It will be automatically closed in 30 days if no further activity occurs.'
+          stale-pr-label: 'lifecycle/stale'
+          stale-pr-message: 'This PR has been marked stale because it has been open for 90 days with no activity. It will be automatically closed in 30 days if no further activity occurs.'
+          days-before-stale: 90
+          close-issue-label: 'lifecycle/rotten'
+          close-issue-message: 'This issue has been closed because it has been stale for 30 days.'
+          close-pr-label: 'lifecycle/rotten'
+          close-pr-message: 'This PR has been closed because it has been stale for 30 days.'
+          days-before-close: 30
+          exempt-issue-labels: 'lifecycle/frozen'
+          exempt-pr-labels: 'lifecycle/frozen'
