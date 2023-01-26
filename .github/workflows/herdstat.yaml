@@ -1,0 +1,25 @@
+#
+# Copyright (c) 2023 - for information on the respective copyright owner
+# see the NOTICE file and/or the repository https://github.com/carbynestack/.github.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+name: 'Herdstat Analysis'
+on:
+  workflow_dispatch:
+  schedule:
+    # Runs every at midnight
+    - cron: '0 0 * * *'
+jobs:
+  herdstat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: herdstat/herdstat-action@v0.5.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.HERDSTAT_PAT }}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          add: 'contribution-graph.svg'
+          message: 'Update contribution graph'

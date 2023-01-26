@@ -7,14 +7,15 @@ This repository contains the Carbyne Stack organization profile and default
 
 ## Structure
 
-``` bash
+```bash
 .
 ├── profile         # GitHub Organization profile for https://github.com/carbynestack
 └── .github       
     └── workflows   # Reusable GitHub Actions that can be accessed across the organization
 ```
 
-**_NOTE:_**  Reusable workflows **must** be located in `.github/workflows` ([reference](https://github.com/orgs/community/discussions/9050))
+**_NOTE:_** Reusable workflows **must** be located in `.github/workflows`
+([reference](https://github.com/orgs/community/discussions/9050))
 
 ## License
 

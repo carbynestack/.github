@@ -7,6 +7,17 @@ infrastructure for sensitive data workloads.
 More information on Carbyne Stack can be found on the
 [Carbyne Stack website](https://carbynestack.io).
 
+## Organisation Contribution Graph
+
+The [`herdstat`](https://github.com/herdstat)-generated contribution graph for
+the [Carbyne Stack organization](https://github.com/carbynestack) including
+contributions in all public repositories over the last year:
+
+<!-- markdownlint-disable MD033 -->
+
+<img src="contribution-graph.svg" alt="carbyne stack contribution graph" width="100%">
+<!-- markdownlint-enable MD033 -->
+
 ## Getting Started
 
 For getting started with Carbyne Stack or to learn how to engage with the
