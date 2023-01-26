@@ -15,11 +15,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.HERDSTAT_PAT }}
+      - uses: crazy-max/ghaction-import-gpg@v5
+        with:
+          gpg_private_key: ${{ secrets.CS_MINION_GPG_PRIVATE_KEY }}
+          passphrase: ${{ secrets.CS_MINION_GPG_PASSPHRASE }}
+          git_user_signingkey: true
+          git_commit_gpgsign: true
       - uses: herdstat/herdstat-action@v0.5.1
         env:
           GITHUB_TOKEN: ${{ secrets.HERDSTAT_PAT }}
       - uses: EndBug/add-and-commit@v9
         with:
-          default_author: github_actions
+          author_name: cs-minion
+          author_email: rng_cr_carbynestack@bosch.com
           add: 'contribution-graph.svg'
           message: 'Update contribution graph'
