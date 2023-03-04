@@ -23,7 +23,9 @@ jobs:
           passphrase: ${{ secrets.CS_MINION_GPG_PASSPHRASE }}
           git_user_signingkey: true
           git_commit_gpgsign: true
-      - uses: herdstat/herdstat-action@v0.6.0
+      - uses: herdstat/herdstat-action@v0.8.1
+        with:
+          version: v0.8.0
         env:
           GITHUB_TOKEN: ${{ secrets.HERDSTAT_PAT }}
       - uses: EndBug/add-and-commit@v9
