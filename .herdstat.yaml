@@ -9,3 +9,7 @@ repositories:
 contribution-graph:
   minify: true
   color: EE2737
+  filters:
+    # Filtering out commits that originate from the herdstat workflow
+    commits:
+      - "Author.Name == 'cs-minion' && Message matches 'Update contribution graph.*'"
