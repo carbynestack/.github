@@ -26,7 +26,7 @@ If Individual's organization is the copyright holder of her contributions add
 the organization's name, optionally also the contributor's name:
 
 ```text
-## Organization's name
+### Organization's name
     
    - Individual's name <submission corporate email address>
 ```
@@ -38,3 +38,4 @@ the organization's name, optionally also the contributor's name:
 ### Robert Bosch GmbH
 
 - Trieflinger Sven <sven.trieflinger@de.bosch.com>
+- Chris Hoeppler <christian.hoeppler@de.bosch.com>

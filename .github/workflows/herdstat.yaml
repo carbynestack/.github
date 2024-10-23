@@ -32,5 +32,5 @@ jobs:
         with:
           author_name: cs-minion
           author_email: rng_cr_carbynestack@bosch.com
-          add: 'contribution-graph.svg'
+          add: 'profile/contribution-graph.svg'
           message: 'Update contribution graph'
